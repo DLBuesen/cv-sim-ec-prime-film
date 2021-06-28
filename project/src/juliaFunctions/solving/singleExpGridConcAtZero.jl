@@ -78,8 +78,8 @@ function singleExpGridConcAtZero(numIntervals,Beta)
                                 :alwaysOnTop=>false,
                                 :title=>"Exponential Grid With Beta=$Beta",
                                 :resizable=>true,
-                                :x=>731,
-                                :y=>250
+                                :x=>578,
+                                :y=>251
                                 );
                           async=false)
 

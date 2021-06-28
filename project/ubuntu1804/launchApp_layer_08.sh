@@ -12,6 +12,6 @@ gnome-terminal --tab -- bash -c '\
 	docker login;\
 	echo ;\
 	sleep 3;\
-	xhost + && docker run -ti --entrypoint /bin/bash --user nonroot -e DISPLAY=$DISPLAY -p 127.0.0.1:8000:8000 -v /tmp/.X11-unix:/tmp/.X11-unix:ro -v $(pwd):/home/nonroot/project -w /home/nonroot/project/src dlbuesen/cv_sim_films_interactions:version-1.1-layer07'
+	xhost + && docker run -ti --entrypoint /bin/bash --user nonroot -e DISPLAY=$DISPLAY -p 127.0.0.1:8000:8000 -v /tmp/.X11-unix:/tmp/.X11-unix:ro -v $(pwd):/home/nonroot/project -w /home/nonroot/project/src dlbuesen/cv_sim_ec-prime-film:version-1.0.0-layer08'
 
 

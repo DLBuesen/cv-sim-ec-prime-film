@@ -168,8 +168,8 @@ function concProfileAnimation()
               :alwaysOnTop=>false,
               :title=>"Capturing Frames For Animation...",
               :resizable=>true,
-              :x=>301,
-              :y=>1205
+              :x=>293,
+              :y=>94
               );
         async=false)
 

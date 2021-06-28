@@ -41,8 +41,8 @@ function expSimOverlayPlot()
                 :alwaysOnTop=>false,
                 :title=>"CV Exp and Sim Overlay Plot",
                 :resizable=>true,
-                :x=>646,
-                :y=>153
+                :x=>578,
+                :y=>251
                 );
         async=false)
 

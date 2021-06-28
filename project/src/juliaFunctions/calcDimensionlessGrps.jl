@@ -32,7 +32,7 @@ function calcDimensionlessGrps()
 
 		#g = load("$exptlParamsFileNameAndPath", "g")
 		#gLaviron = load("$exptlParamsFileNameAndPath", "gLaviron")
-		gBard = load("$exptlParamsFileNameAndPath", "gBard")
+		#gBard = load("$exptlParamsFileNameAndPath", "gBard")
 
 		Ei_mV = load("$exptlParamsFileNameAndPath", "Ei_mV")
 		Es_mV = load("$exptlParamsFileNameAndPath", "Es_mV")
@@ -72,7 +72,7 @@ function calcDimensionlessGrps()
 
 		refCurrent_uA = (Part1)/(Part2) ;
 
-	# Quantities relevant for comparison to an adsorbed monolayer
+#= 	# Quantities relevant for comparison to an adsorbed monolayer
 
 		G_Laviron = -0.25*gBard ;
 
@@ -83,7 +83,7 @@ function calcDimensionlessGrps()
 
 		psiLaviron_uA = 4*refCurrent_AdsMono_uA ;
 
-		peakPotentialLaviron_mV = Ep0_mV - RTdivF_mV * G_Laviron ;
+		peakPotentialLaviron_mV = Ep0_mV - RTdivF_mV * G_Laviron ; =#
 
 
 	# Xi400 for use in scaling the potential
@@ -173,15 +173,31 @@ function calcDimensionlessGrps()
 		write(file, "t_fwd_s", t_fwd_s)
 		write(file, "t_sw_s", t_sw_s)
 		write(file, "t_rev_s", t_rev_s)
-		write(file, "gBard", gBard)
+#= 		write(file, "gBard", gBard)
 		write(file, "refCurrent_AdsMono_uA", refCurrent_AdsMono_uA)
 		write(file, "Gamma_pmol_cm2", Gamma_pmol_cm2)
 		write(file, "G_Laviron", G_Laviron)
 		write(file, "peakPotentialLaviron_mV", peakPotentialLaviron_mV)
-		write(file, "psiLaviron_uA", psiLaviron_uA)
+		write(file, "psiLaviron_uA", psiLaviron_uA) =#
 	end
 
 # Return values that are needed
+
+#= 	return scanRate_mVps,FarConst_uA,
+	Ptot_cm3,Ytot_cm3,k_py_cm3,
+	Dp_cm2_s,Dy_cm2_s,
+	discArea_cm2,filmThickness_cm,
+	k0_cm,Alpha,
+	Ei_mV,Es_mV,Ef_mV,Ep0_mV,
+	Rs_Ohm,Cd_F,Cd_uA_mV,RsCd_s,maxCapCurrent_uA,
+	Temp_K,RTdivF_mV,
+	refCurrent_uA,Xi400,refTime_s,
+	wHalf_p,wHalf_y,
+	tauCap,zetaCap,
+	phiP,Eref_mV,Epsilon_pi,Epsilon_ps,Epsilon_pf,
+	kappa_py_p,kappa_py_y,
+	t_tot,t_fwd,t_sw,t_rev,
+	t_tot_s,t_fwd_s,t_sw_s,t_rev_s,gBard,refCurrent_AdsMono_uA,Gamma_pmol_cm2,G_Laviron,peakPotentialLaviron_mV,psiLaviron_uA =#
 
 	return scanRate_mVps,FarConst_uA,
 	Ptot_cm3,Ytot_cm3,k_py_cm3,
@@ -197,7 +213,7 @@ function calcDimensionlessGrps()
 	phiP,Eref_mV,Epsilon_pi,Epsilon_ps,Epsilon_pf,
 	kappa_py_p,kappa_py_y,
 	t_tot,t_fwd,t_sw,t_rev,
-	t_tot_s,t_fwd_s,t_sw_s,t_rev_s,gBard,refCurrent_AdsMono_uA,Gamma_pmol_cm2,G_Laviron,peakPotentialLaviron_mV,psiLaviron_uA
+	t_tot_s,t_fwd_s,t_sw_s,t_rev_s
 
 #-----
 

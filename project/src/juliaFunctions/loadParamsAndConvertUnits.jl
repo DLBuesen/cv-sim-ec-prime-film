@@ -77,7 +77,7 @@ function loadParamsAndConvertUnits()
 
     # Interaction parameter
 
-    gBard = XLSX.readdata("$paramsFilePath", "ExptlParams", "B24") ;
+    #gBard = XLSX.readdata("$paramsFilePath", "ExptlParams", "B24") ;
 
 
  # Save the initial plot variables in a jld file for later use
@@ -102,7 +102,7 @@ function loadParamsAndConvertUnits()
               write(file, "Rs_Ohm", Rs_Ohm)
               write(file, "Cd_F", Cd_F)
               write(file, "Cd_uA_mV", Cd_uA_mV)
-              write(file, "gBard", gBard)
+              #write(file, "gBard", gBard)
           end
 
           # To view all of the variables in a jld file

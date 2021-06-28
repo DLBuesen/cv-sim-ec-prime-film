@@ -80,7 +80,7 @@ tauCap,zetaCap,
 phiP,Eref_mV,Epsilon_pi,Epsilon_ps,Epsilon_pf,
 kappa_py_p,kappa_py_y,
 t_tot,t_fwd,t_sw,t_rev,
-t_tot_s,t_fwd_s,t_sw_s,t_rev_s,gBard,refCurrent_AdsMono_uA,Gamma_pmol_cm2,G_Laviron,peakPotentialLaviron_mV = calcDimensionlessGrps() =#
+t_tot_s,t_fwd_s,t_sw_s,t_rev_s,gBard,refCurrent_AdsMono_uA,Gamma_pmol_cm2,G_Laviron,peakPotentialLaviron_mV,psiLaviron_uA = calcDimensionlessGrps() =#
 
 scanRate_mVps,FarConst_uA,
 Ptot_cm3,Ytot_cm3,k_py_cm3,
@@ -96,7 +96,7 @@ tauCap,zetaCap,
 phiP,Eref_mV,Epsilon_pi,Epsilon_ps,Epsilon_pf,
 kappa_py_p,kappa_py_y,
 t_tot,t_fwd,t_sw,t_rev,
-t_tot_s,t_fwd_s,t_sw_s,t_rev_s,gBard,refCurrent_AdsMono_uA,Gamma_pmol_cm2,G_Laviron,peakPotentialLaviron_mV,psiLaviron_uA = calcDimensionlessGrps()
+t_tot_s,t_fwd_s,t_sw_s,t_rev_s = calcDimensionlessGrps()
 
 
 
@@ -161,7 +161,8 @@ t_tot_s,t_fwd_s,t_sw_s,t_rev_s,gBard,refCurrent_AdsMono_uA,Gamma_pmol_cm2,G_Lavi
 
 			# Populate ODE coefficients for Pox
 
-			P_ODE = Pox_ODE_Coefficients(P_ODE,h,numPts,wHalf_p,Xi400,Alpha,Eref_mV,RTdivF_mV,phiP,kappa_py_p,gBard) ;
+			# P_ODE = Pox_ODE_Coefficients(P_ODE,h,numPts,wHalf_p,Xi400,Alpha,Eref_mV,RTdivF_mV,phiP,kappa_py_p,gBard) ;
+			P_ODE = Pox_ODE_Coefficients(P_ODE,h,numPts,wHalf_p,Xi400,Alpha,Eref_mV,RTdivF_mV,phiP,kappa_py_p) ;
 
 			# Populate ODE coefficients for Yox
 
@@ -198,14 +199,16 @@ t_tot_s,t_fwd_s,t_sw_s,t_rev_s,gBard,refCurrent_AdsMono_uA,Gamma_pmol_cm2,G_Lavi
 			Part1a = P_ODE[1,101] ;
 			Part1b = exp( -P_ODE[1,99]*(Epsilon_CV(t,t_sw,t_tot,RTdivF_mV,Eref_mV,Xi400,Epsilon_pi,Epsilon_pf)) ) ;
 			#Part1c = 1 ;
-			Part1c = exp( P_ODE[1,99]*P_ODE[1,98]*(u[1]) ) ;
+			#Part1c = exp( P_ODE[1,99]*P_ODE[1,98]*(u[1]) ) ;
+			Part1c = exp( P_ODE[1,99]*(u[1]) ) ;
 			Part1d = u[1] ;
 		Part1 = (Part1a)*(Part1b)*(Part1c)*(Part1d) ;
 
 			Part2a = P_ODE[1,102] ;
 			Part2b = exp( (1-P_ODE[1,99])*(Epsilon_CV(t,t_sw,t_tot,RTdivF_mV,Eref_mV,Xi400,Epsilon_pi,Epsilon_pf)) ) ;
 			#Part2c = 1 ;
-			Part2c = exp( -(1-P_ODE[1,99])*P_ODE[1,98]*u[1] ) ;
+			#Part2c = exp( -(1-P_ODE[1,99])*P_ODE[1,98]*u[1] ) ;
+			Part2c = exp( -(1-P_ODE[1,99])*u[1] ) ;
 			Part2d = 1-u[1] ;
 		Part2 = (Part2a)*(Part2b)*(Part2c)*(Part2d) ;
 
@@ -418,7 +421,7 @@ end
 
 		# sheet = xf[3]
 
-		sheet["M1"] = "Adsorbed Monolayer Comparison"
+#= 		sheet["M1"] = "Adsorbed Monolayer Comparison"
 
 		sheet["M3"] = "Equivalent Coverage [=] pmol*cm-2"
 
@@ -434,7 +437,7 @@ end
 		sheet["M13"] = psiLaviron_uA
 
 		sheet["M15"] = "Peak Potential (Laviron) [=] mV"
-		sheet["M16"] = peakPotentialLaviron_mV
+		sheet["M16"] = peakPotentialLaviron_mV =#
 
  	end
 		

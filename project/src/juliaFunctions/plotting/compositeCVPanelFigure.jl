@@ -4,8 +4,8 @@ function compositeCVPanelFigure(dimensionalCompositeSimulatedCV_Plot,dimensionle
 
     #-----Prepare the first frame of the panel plot
 
-        window_Width = 1068 ;
-        window_Height = 634 ;
+        window_Width = 1225 ;
+        window_Height = 530 ;
 
         global compositeCVPanel_Plot_Window = Blink.AtomShell.Window(
         Blink.shell(),
@@ -14,8 +14,8 @@ function compositeCVPanelFigure(dimensionalCompositeSimulatedCV_Plot,dimensionle
               :alwaysOnTop=>false,
               :title=>"Composite CVs",
               :resizable=>true,
-              :x=>306,
-              :y=>349
+              :x=>182,
+              :y=>404
               );
         async=false)
 

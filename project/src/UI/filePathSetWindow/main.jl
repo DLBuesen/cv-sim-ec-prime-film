@@ -44,8 +44,8 @@ function openFilePathSetWindow()
                         :alwaysOnTop=>false,
                         :title=>"Select File",
                         :resizable=>true,
-                        :x=>985,
-                        :y=>267
+                        :x=>1465,
+                        :y=>160
                         );
                   async=false)
 

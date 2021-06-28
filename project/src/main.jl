@@ -76,8 +76,8 @@ include("juliaFunctions/createWindow.jl")
                     :alwaysOnTop=>false,
                     :title=>"Main Window",
                     :resizable=>true,
-                    :x=>1407,
-                    :y=>236
+                    :x=>1467,
+                    :y=>434
                     );
               async=false)
 
