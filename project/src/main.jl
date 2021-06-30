@@ -97,17 +97,8 @@ include("juliaFunctions/createWindow.jl")
         #       async=false)
 
         Blink.body!(mainWindow,HTML_CSS_JS_combined; fade=false, async=false)
-        #sleep(5)
-
-        #println("Main window is ready")
-
-        # mainWindow = createWindow(windowName,width,height)
-        # Blink.AtomShell.title(mainWindow,"Main Menu")
 
         display("The main window is now loaded.")
-        #display("After pressing the 'Set File Path' Button, it will take at approximately 10 seconds for the next message to appear...")
-
-        #@js_ mainWindow console.log("Hellow main window!")
 
     # Callback Functions
 
@@ -121,7 +112,6 @@ include("juliaFunctions/createWindow.jl")
         include("UI/filePathSetWindow/main.jl")
 
         Blink.handlers(mainWindow)["filePathButtonCallback"] = function (n)
-                                                          # println("filePathButtonCallback Function Reached!")
                                                           println("Opening file path selection window...")
                                                           openFilePathSetWindow()
                                                         end
