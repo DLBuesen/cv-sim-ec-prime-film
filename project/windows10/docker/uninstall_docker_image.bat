@@ -12,7 +12,7 @@ echo.
 
 timeout 3
 
-docker rmi dlbuesen/cv_sim_films_interactions:version-1.1-layer07
+docker rmi dlbuesen/cv_sim_ec-prime-film:version-1.0.0-layer08
 
 timeout 3
 echo Listing the installed docker images on the system...
@@ -25,7 +25,7 @@ timeout 3
 
 echo Docker image from repository
 echo "dlbuesen/cv_sim_films_interactions"
-echo with tag "version-1.1-layer07"
+echo with tag "version-1.0.0-layer08"
 echo should not appear in the list of images above
 echo.
 
