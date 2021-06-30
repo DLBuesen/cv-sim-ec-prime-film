@@ -32,7 +32,6 @@ function concProfileAnimation()
 
     # Number of species
     numMatBal = load("$plotDataFileNameAndPath", "numMatBal")
-    #numMatBal = 2 ; # Already set and saved elsewhere, replace this later with reference.
 
     numSpacePtsPerSpecies = Int(numSpacePts/numMatBal) ;
 
@@ -199,7 +198,6 @@ function concProfileAnimation()
 
         savefig(dlessConcProfilePanel_Plot,width=window_Width, height=window_Height,"temp/$animationFramesFolder/frame$timeIndex.png")
 
-        # savefig(dlessConcProfilePanel_Plot,"temp/animationFramesFolder/testFrame.png")
 
 #------------------------------------------------------------------------
 # Update the plot for all time points in a loop
