@@ -14,8 +14,6 @@ else
 end
 
 
-# expDataParamsFileName = load("temp/expDataParamsFileName.jld", "expDataParamsFileName")
-
 # Reading the plots options
 
 gridPlotOption = XLSX.readdata(paramsFilePath, "Options", "B4") ;

@@ -75,10 +75,6 @@ function loadParamsAndConvertUnits()
         Cd_F = Cd_pF*(1e-12) ; # [=] Farads, F = A*s*V^-1
         Cd_uA_mV = Cd_pF ; # [=] uA*s-1*mV-1
 
-    # Interaction parameter
-
-    #gBard = XLSX.readdata("$paramsFilePath", "ExptlParams", "B24") ;
-
 
  # Save the initial plot variables in a jld file for later use
 
@@ -102,7 +98,6 @@ function loadParamsAndConvertUnits()
               write(file, "Rs_Ohm", Rs_Ohm)
               write(file, "Cd_F", Cd_F)
               write(file, "Cd_uA_mV", Cd_uA_mV)
-              #write(file, "gBard", gBard)
           end
 
           # To view all of the variables in a jld file
