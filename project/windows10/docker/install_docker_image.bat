@@ -24,7 +24,7 @@ docker images
 timeout 3
 
 echo Docker image from repository
-echo "dlbuesen/cv_sim_films_interactions"
+echo "dlbuesen/cv_sim_ec-prime-film"
 echo with tag "version-1.0.0-layer08"
 echo should appear in the list of images above
 echo.
