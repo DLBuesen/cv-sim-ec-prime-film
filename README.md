@@ -5,6 +5,7 @@
 
 # System Description Highlights
 - EC' reaction, electron transfer in the film by means of hopping, characterized by the diffusion coefficient of the electron.
+- Forward sweep is a reduction.
 - Electron transfer at the electrode surface is characterized by Butler-Volmer kinetics.
 - A complete description of the system can be found in the SI of the following [paper](https://www.nature.com/articles/s41467-020-14673-7). It is closely related to two other redox active film models, which can be found [here](https://pubs.acs.org/doi/abs/10.1021/acs.jpcc.5b02376) and [here](https://chemistry-europe.onlinelibrary.wiley.com/doi/abs/10.1002/celc.201500217). This app can be used to replicate CVs from the model in the first paper, because it shares the assumption of constant substrate in the surrounding solution which does not experience depletion. The second model applies to the situation where substrate is uniformally depleted, which corresponds to a different experimental situation. Therefore, the model here is closely related to but not equal to the second one.
 - Can include capacitance contributions to the simulated signal by entering resistance and capacitance parameter values.
@@ -14,6 +15,7 @@
 # App Demonstration Videos
 - Demonstration videos in which the app is running on a windows 10 operating system are available.
 - A video in which an overview of the app is given can be found [here].
+- A video showing the installation, verification, and the uninstallation of the app can be found [here] to give a visual impression of what to expect in the process, but it will still be necessary to read the provided documentation.
 
 # Results Obtained
 - A plot of the spatial grid used for solving can also be obtained for purposes of tuning the solving parameters in order to gain satisfactory accuracy without sacrificing speed.
@@ -24,7 +26,7 @@
 
 # Typical Workflow
 - Data from the experimental CV is copied/pasted into its respective tab of the parameter input file.
-- Dimensional parameters (i.e. experimetal data, concentration, scan-rate, interaction parameter, etc.) are copied/pasted into its respective tabs of the parameter input file.
+- Dimensional parameters (i.e. experimetal data, concentration, scan-rate, etc.) are copied/pasted into its respective tabs of the parameter input file.
 - Options related to plots and the solver are indicated in its respective tab of the parameter input file.
 - If applicable, start up prerequiste supporting software (i.e. Docker, XLaunch).
 - When starting the app, the location of the parameter file must be confirmed. This only needs to be done once per session.
@@ -36,7 +38,6 @@
 - It is recommended that the installation of the prerequisites for this app (Docker and xLaunch) be performed by IT-support personnel or by advanced PC users (i.e. comfortable going into bios to change settings, using the command line, resolution of system-specific issues that might arise via google search and some troubleshooting).
 - Installation and use of the app itself does not require any specialized computer knowledge once the prerequisites are fulfulled.
 - Additional installation instructions which are operating system specific can be found within this project for [Windows 10](https://github.com/DLBuesen/redox-active-film-distribution-reversible/tree/main/project/windows10) and for [Ubuntu 18.04](https://github.com/DLBuesen/redox-active-film-distribution-reversible/tree/main/project/ubuntu1804).
-- Demo videos of the [installation], [verification], and the [uninstallation] of the app are also available to give a visual impression of what to expect in the process, but it will still be necessary to read the provided documentation.
 
 # License
 - This app was made using free open source software (Julia programming language). Therefore, usage is not restricted to teaching and research purposes.
