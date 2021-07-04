@@ -84,7 +84,7 @@ include("juliaFunctions/paramFileDirectory.jl")
     end
 
 
-    display("File Path Set Window is loaded")
+    display("File path set window is loaded")
         # To allow for everyting to load
 
   end

@@ -6,11 +6,7 @@ function Pox_ODE_Coefficients(P_ODE,h,numPts,wHalf_p,Xi400,Alpha,Eref_mV,RTdivF_
     			eqnNum = 1 ;
 
     			offset = numPts*(eqnNum-1) ;
-                # println("offset = $offset")
-                # sleep(5)
     				# offset accounts for the fact that the ODEs for each species are vertically stacked
-
-                println("Alpha = $Alpha")
 
     			# Electrode Surface, Pox
 

@@ -66,8 +66,8 @@ function calcDimensionlessGrps()
 
 	# Calculation of the reference current (Semi-Infinite)
 
-			Part1 = 0.4463*FarConst_uA*discArea_cm2*Ptot_cm3*sqrt(Dp_cm2_s)*sqrt(scanRate_mVps) ;
-			#Part1 = FarConst_uA*discArea_cm2*Ptot_cm3*sqrt(Dp_cm2_s)*sqrt(scanRate_mVps) ;
+			#Part1 = 0.4463*FarConst_uA*discArea_cm2*Ptot_cm3*sqrt(Dp_cm2_s)*sqrt(scanRate_mVps) ;
+			Part1 = FarConst_uA*discArea_cm2*Ptot_cm3*sqrt(Dp_cm2_s)*sqrt(scanRate_mVps) ;
 			Part2 = sqrt(RTdivF_mV) ;
 
 		refCurrent_uA = (Part1)/(Part2) ;
