@@ -85,6 +85,8 @@ function singleExpGridConcAtZero(numIntervals,Beta)
 
                     Blink.body!(exponentialGridPlotWindow,exponentialGridPlot; fade=false, async=false)
 
+                    sleep(2) # To allow for the plot to completely appear before it is overlaid with another plot
+
         elseif(gridPlotOption=="No")
                 display("Grids are not plotted. Change 'Grid plotting option' to 'Yes' to generate the plots along with the grids.")
         end

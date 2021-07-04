@@ -134,7 +134,7 @@ include("juliaFunctions/createWindow.jl")
         include("juliaFunctions/plotting/compositeCVPanelFigure.jl")
 
         Blink.handlers(mainWindow)["runSimButton_Blink"] = function (n)
-                                                          println("runSimButton_Blink Handler Reached!")
+                                                          println("Starting the simulation...")
                                                           loadExpData()
                                                           loadParamsAndConvertUnits()
                                                           gridPlotOption,animationOption,expSimOverlayPlotOption,compositeCVoption = loadOptions()
@@ -144,7 +144,7 @@ include("juliaFunctions/createWindow.jl")
                                                               println("Making experimental and simulation overlay plot")
                                                               expSimOverlayPlot()
                                                           else
-                                                              println("not making experimental and simulation overlay plot")
+                                                              println("Not making experimental and simulation overlay plot")
                                                           end
 
                                                           if (compositeCVoption=="Yes")
@@ -169,7 +169,7 @@ include("juliaFunctions/createWindow.jl")
         # To close the app
 
         Blink.@js mainWindow document.getElementById("closeAppButton").onclick = function ()
-                    console.log("closeAppButton Pushed!")
+                    console.log("Closing the app...")
             Blink.msg("closeAppEvent", "noVariable");
 
         end

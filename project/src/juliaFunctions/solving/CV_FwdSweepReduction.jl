@@ -21,7 +21,7 @@ include("Yox_ODE_Coefficients.jl")
 function CV_FwdSweepReduction()
 
 
-	display("Starting Simulation...")
+	#display("Starting Simulation...")
 
 
 scanRate_mVps,FarConst_uA,
@@ -111,17 +111,27 @@ t_tot_s,t_fwd_s,t_sw_s,t_rev_s = calcDimensionlessGrps()
 
           # Electrode Surface, Pox, u[1])
 
-			Part1a = P_ODE[1,101] ;
+#= 			Part1a = P_ODE[1,101] ;
 			Part1b = exp( -P_ODE[1,99]*(Epsilon_CV(t,t_sw,t_tot,RTdivF_mV,Eref_mV,Xi400,Epsilon_pi,Epsilon_pf)) ) ;
 			Part1c = exp( P_ODE[1,99]*(u[1]) ) ;
 			Part1d = u[1] ;
-		Part1 = (Part1a)*(Part1b)*(Part1c)*(Part1d) ;
+		Part1 = (Part1a)*(Part1b)*(Part1c)*(Part1d) ; =#
 
-			Part2a = P_ODE[1,102] ;
+		Part1a = P_ODE[1,101] ;
+		Part1b = exp( -P_ODE[1,99]*(Epsilon_CV(t,t_sw,t_tot,RTdivF_mV,Eref_mV,Xi400,Epsilon_pi,Epsilon_pf)) ) ;
+		Part1c = u[1] ;
+	Part1 = (Part1a)*(Part1b)*(Part1c) ;
+
+#= 			Part2a = P_ODE[1,102] ;
 			Part2b = exp( (1-P_ODE[1,99])*(Epsilon_CV(t,t_sw,t_tot,RTdivF_mV,Eref_mV,Xi400,Epsilon_pi,Epsilon_pf)) ) ;
 			Part2c = exp( -(1-P_ODE[1,99])*u[1] ) ;
 			Part2d = 1-u[1] ;
-		Part2 = (Part2a)*(Part2b)*(Part2c)*(Part2d) ;
+		Part2 = (Part2a)*(Part2b)*(Part2c)*(Part2d) ; =#
+
+		Part2a = P_ODE[1,102] ;
+		Part2b = exp( (1-P_ODE[1,99])*(Epsilon_CV(t,t_sw,t_tot,RTdivF_mV,Eref_mV,Xi400,Epsilon_pi,Epsilon_pf)) ) ;
+		Part2c = 1-u[1] ;
+	Part2 = (Part2a)*(Part2b)*(Part2c) ;
 
             Part3 = P_ODE[1,103]*(u[2]-u[1]) ;
 

@@ -28,4 +28,6 @@ function compositeCVPanelFigure(dimensionalCompositeSimulatedCV_Plot,dimensionle
 
         Blink.body!(compositeCVPanel_Plot_Window, compositeCVPanel_Plot; fade=false, async=false)
 
+        sleep(2) # To allow for the plot to completely appear before it is overlaid with another plot
+
 end

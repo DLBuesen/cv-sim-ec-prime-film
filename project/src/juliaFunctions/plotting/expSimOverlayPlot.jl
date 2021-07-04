@@ -48,4 +48,6 @@ function expSimOverlayPlot()
 
         Blink.body!(dimensional_ExpSim_CV_Overlay_Plot_Window,dimensional_ExpSim_CV_Overlay_Plot; fade=false, async=false)
 
+        sleep(2) # To allow for the plot to completely appear before it is overlaid with another plot
+
 end
