@@ -15,7 +15,7 @@
 # App Demonstration Videos
 - Demonstration videos in which the app is running on a windows 10 operating system are available.
 - A video in which an overview of the app is given can be found [here](https://vimeo.com/570681480).
-- A video showing the installation, verification, and the uninstallation of the app can be found [here](https://vimeo.com/570627294) to give a visual impression of what to expect in the process, but it will still be necessary to read the provided documentation.
+- A video showing the installation and the uninstallation of the app can be found [here](https://vimeo.com/570627294) to give a visual impression of what to expect in the process, but it will still be necessary to read the provided documentation.
 
 # Results Obtained
 - A plot of the spatial grid used for solving can also be obtained for purposes of tuning the solving parameters in order to gain satisfactory accuracy without sacrificing speed.
