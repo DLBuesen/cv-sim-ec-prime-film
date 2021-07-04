@@ -22,7 +22,15 @@ function loadParamsAndConvertUnits()
 #-----
 
     Ptot_mM = XLSX.readdata(paramsFilePath, "ExptlParams", "B2") ;
-      Ptot_cm3 = Ptot_mM*(1e-3)*(1e-3) ; # %Conversion to M then to mol*cm-3
+
+        if (Ptot_mM==0)
+            println("Error: Ptot cannot be set equal to zero")
+            Ptot_cm3 = Ptot_mM*(1e-3)*(1e-3) ; # %Conversion to M then to mol*cm-3
+        else
+            Ptot_cm3 = Ptot_mM*(1e-3)*(1e-3) ; # %Conversion to M then to mol*cm-3
+        end
+
+        
 
     Dp_cm2_s = XLSX.readdata(paramsFilePath, "ExptlParams", "B3") ;
 
@@ -33,12 +41,28 @@ function loadParamsAndConvertUnits()
 #-----
 
     Ytot_mM = XLSX.readdata(paramsFilePath, "ExptlParams", "B7") ;
-        Ytot_cm3 = Ytot_mM*(1e-3)*(1e-3) ; # %Conversion to M then to mol*cm-3
+
+        if (Ytot_mM==0)
+            Ytot_mM=1e-20 ;
+            Ytot_cm3 = Ytot_mM*(1e-3)*(1e-3) ; # %Conversion to M then to mol*cm-3
+        else
+            Ytot_cm3 = Ytot_mM*(1e-3)*(1e-3) ; # %Conversion to M then to mol*cm-3
+        end
+
+        
 
     Dy_cm2_s = XLSX.readdata(paramsFilePath, "ExptlParams", "B8") ;
 
     k_py_M = XLSX.readdata(paramsFilePath, "ExptlParams", "B9") ;
-        k_py_cm3 = k_py_M*1000 ; # Conversion to mol*cm-3*s-1
+
+        if (k_py_M==0)
+            k_py_M=1e-20 ;
+            k_py_cm3 = k_py_M*1000 ; # Conversion to mol*cm-3*s-1
+        else
+            k_py_cm3 = k_py_M*1000 ; # Conversion to mol*cm-3*s-1
+        end
+
+        
 
 #-----
 
